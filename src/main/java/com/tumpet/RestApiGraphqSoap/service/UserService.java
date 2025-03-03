@@ -2,6 +2,7 @@ package com.tumpet.RestApiGraphqSoap.service;
 
 import com.tumpet.RestApiGraphqSoap.entity.Users;
 import com.tumpet.RestApiGraphqSoap.repository.UserRepository;
+import jakarta.jws.WebService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
@@ -10,6 +11,7 @@ import java.util.*;
 
 @Service
 @RequiredArgsConstructor
+@WebService(endpointInterface = "com.tumpet.RestApiGraphqSoap.service.UserSoapService")
 public class UserService {
 
     private final UserRepository userRepository;
